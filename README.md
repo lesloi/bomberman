@@ -41,8 +41,5 @@ Taper ensuite dans un terminal :
 
 ### Let's play and enjoy !
 
-https://bomberman-lesloi.c9users.io
-
-
 
 _Sources des images du jeux_ : http://opengameart.org/content/bomb-party-the-complete-set
