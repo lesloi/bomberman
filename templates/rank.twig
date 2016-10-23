@@ -1,0 +1,26 @@
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Rang</th>
+      <th>Nom d'utilisateur</th>
+      <th>Victoires</th>
+      <th>Défaites</th>
+      <th>Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in users %}
+      <tr>
+        <th scope="row">{{ loop.index }}</th>
+        <th {{ users_connected[user.id] ? 'class="text-success"' : '' }}>{{ user.login }}</th>
+        <th>{{ user.victories }}</th>
+        <th>{{ user.losses }}</th>
+        <th>{{ user.points }}</th>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<p class="text-success text-center">
+  {{ users_connected.length }} utilisateur(s) connecté(s)
+</p>

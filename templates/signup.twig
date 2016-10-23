@@ -1,0 +1,29 @@
+<form id="form-signup" method="POST">
+  <h2 class="text-center">Inscription</h2>
+
+  {% if error %}
+    <p class="text-danger">{{ error }}</p>
+  {% endif %}
+
+  <div class="form-group">
+    <label for="inputLogin" class="sr-only">Login</label>
+    <input type="text" name="login" id="inputLogin" class="form-control" placeholder="Login" value="{{ form_login }}" pattern="\S{3,20}" title="Entre 3 et 20 caractères" required autofocus />
+  </div>
+  <div class="form-group">
+    <label for="inputEmail" class="sr-only">Adresse e-mail</label>
+    <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Adresse e-mail" value="{{ form_email }}" required />
+  </div>
+  <div class="form-group">
+    <label for="inputPassword" class="sr-only">Mot de passe</label>
+    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Mot de passe" pattern=".{6,}" title="Minimum 6 caractères" required />
+  </div>
+  <div class="form-group">
+    <label for="inputConfirmPassword" class="sr-only">Comfirmer mot de passe</label>
+    <input type="password" name="confirm_password" id="inputConfirmPassword" class="form-control" placeholder="Confirmer mot de passe" autocomplete="off" required />
+  </div>
+
+  <div class="form-group">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Inscription</button>
+  </div>
+</form>

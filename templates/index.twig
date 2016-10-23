@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{{ page|capitalize }} - Bomberman</title>
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <div class="container">
+      <img src="/img/banniere.png" class="img-responsive" alt="Banniere" />
+
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">Bomberman</a>
+          </div>
+
+          <div id="navbar" class="navbar-collapse collapse text-center">
+            <ul class="nav navbar-nav">
+              {% if csrf_logout %}
+                <!-- User is connected -->
+                <li {{ page == 'profil' ? 'class="active"' : '' }}><a href="/profil">Mon compte</a></li>
+              {% else %}
+                <li {{ page == 'signin' ? 'class="active"' : '' }}><a href="/signin">Connexion</a></li>
+                <li {{ page == 'signup' ? 'class="active"' : '' }}><a href="/signup">Inscription</a></li>
+              {% endif %}
+              <li {{ page == 'rank' ? 'class="active"' : '' }}><a href="/rank">Classement</a></li>
+            </ul>
+            {% if csrf_logout %}
+              <!-- Logout -->
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <a href="/logout" onclick="$('#form_logout').submit(); return false;">Déconnexion</a>
+                  <form id="form_logout" action="/logout" method="POST">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_logout }}" />
+                  </form>
+                </li>
+              </ul>
+            {% endif %}
+          </div>
+        </div>
+      </nav>
+
+      <!-- Content page -->
+      <div id="page_{{ page }}">
+        {% include page ~ ".twig" %}
+      </div>
+    </div>
+
+    <script src="jquery-1.12.3.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

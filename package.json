@@ -1,0 +1,28 @@
+{
+  "name": "Bomberman",
+  "version": "1.0.0",
+  "description": "Ce dépôt contient les fichiers de configuration pour l'installation des bibliothèques utilisées pour le projet Bomberman dans le cours Applications Web et Sécurité <http://defeo.lu/aws>.",
+  "main": "app.js",
+  "author": [
+    "Myriam DYANI",
+    "Loïc LESPORT"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "cookie-parser": "^1.4.1",
+    "crypto": "0.0.3",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "express-socket.io-session": "^1.3.1",
+    "mysql": "^2.10.2",
+    "node-dev": "^3.1.0",
+    "socket.io": "^1.4.5",
+    "twig": "^0.8.9",
+    "validator": "^5.2.0",
+    "x-frame-options": "^1.0.0"
+  },
+  "engines": {
+    "node": "^4.2.4"
+  }
+}

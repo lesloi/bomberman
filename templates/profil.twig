@@ -1,0 +1,61 @@
+<form id="form_profil" class="form-horizontal" method="POST">
+  <h2 class="text-center">Modifier mon compte</h2>
+  {% if success %}
+    <p class="text-success">{{ success }}</p>
+  {% else %}
+    <p class="text-danger">{{ error }}</p>
+  {% endif %}
+  <div class="form-group">
+    <label class="col-sm-5 control-label">Login</label>
+    <div class="col-sm-7">
+      <p class="form-control-static">{{ form_login }}</p>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputEmail" class="col-sm-5 control-label">Adresse e-mail<sup>*</sup></label>
+    <div class="col-sm-7">
+      <input type="email" name="email" class="form-control" id="inputEmail" value="{{ form_email }}" required />
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword" class="col-sm-5 control-label">Mot de passe<sup>*</sup></label>
+    <div class="col-sm-7">
+      <input type="password" name="password" class="form-control" id="inputPassword" required />
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputNewPassword" class="col-sm-5 control-label">Nouveau mot de passe</label>
+    <div class="col-sm-7">
+      <input type="password" name="new_password" class="form-control" id="inputNewPassword" />
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPrenom" class="col-sm-5 control-label">Prenom</label>
+    <div class="col-sm-7">
+      <input type="text" name="prenom" class="form-control" id="inputPrenom" value="{{ form_prenom }}" />
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputNom" class="col-sm-5 control-label">Nom</label>
+    <div class="col-sm-7">
+      <input type="text" name="nom" class="form-control" id="inputNom" value="{{ form_nom }}" />
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-5 control-label">Sexe</label>
+    <div class="col-sm-7">
+      <label class="radio-inline">
+        <input type="radio" name="sex" value="H" {{ form_sex == 'H' ? 'checked' : '' }}> Homme
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="sex" value="F" {{ form_sex == 'F' ? 'checked' : '' }}> Femme
+      </label>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-5 col-sm-5">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+      <button type="submit" class="btn btn-lg btn-primary btn-block">Modifier</button>
+    </div>
+  </div>
+</form>
