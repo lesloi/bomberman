@@ -106,8 +106,9 @@ module.exports = function(nb_players) {
   		players[num][1] = coord[direction][1];
 
   		return true;
-    } else
-    return false;
+    } else {
+      return false;
+    }
   };
 
   // function to place a bomb (true if accepted)
@@ -146,8 +147,9 @@ module.exports = function(nb_players) {
   		}, 1000);
 
       return true;
-    } else
+    } else {
       return false;
+    }
   };
 
   return this;
