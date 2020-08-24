@@ -39,11 +39,11 @@ var Game = function(nb_players) {
 		// array of cell
 		map = data.map;
 		// array of players with their coord and if they can put a bomb
-		players = data.players,
+		players = data.players;
 		// array of bombs with their coord and remaining time
-		bombs = data.bombs,
+		bombs = data.bombs;
 		// size of the map
-		nb_row_column = data.nb_row_column,
+		nb_row_column = data.nb_row_column;
 		// current player number
 		num_player = data.num_player;
 
