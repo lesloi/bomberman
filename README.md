@@ -11,8 +11,6 @@ Les joueurs disposent d’un nombre illimité de bombes à retardement, qu’ils
 
 Lorsqu’une bombe explose, son explosion frappe dans quatres directions, jusqu’à une distance préderminée. Un joueur frappé par une explosion est éliminé du jeu.
 
-
-
 ## Installation
 
 Il est nécessaire d'avoir installé Node.js, version ^4.2.4.
