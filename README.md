@@ -1,4 +1,4 @@
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/lesloi/bomberman/Node.js%20CI)](https://github.com/lesloi/bomberman/actions)
+![GitHub Workflow Status](https://github.com/lesloi/bomberman/workflows/Node.js%20CI/badge.svg)
 
 # Bomberman
 
