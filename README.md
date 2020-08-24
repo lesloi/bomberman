@@ -3,7 +3,6 @@
 
 # Bomberman
 
-
 ## Description du projet
 
 Bomberman se joue de deux a quatre joueurs. Les joueurs démarrent aux coins opposés d’une une grille 11×11.
@@ -41,6 +40,5 @@ Taper ensuite dans un terminal :
     node app.js
 
 ### Let's play and enjoy
-
 
 _Sources des images du jeux_ : http://opengameart.org/content/bomb-party-the-complete-set
