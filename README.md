@@ -40,7 +40,7 @@ Taper ensuite dans un terminal :
 
     node app.js
 
-### Let's play and enjoy !
+### Let's play and enjoy
 
 
 _Sources des images du jeux_ : http://opengameart.org/content/bomb-party-the-complete-set
