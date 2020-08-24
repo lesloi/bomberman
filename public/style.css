@@ -42,7 +42,7 @@ body {
 #form-signin, #form-signup {
   max-width: 330px;
   padding: 15px;
-  padding-top: 0px;
+  padding-top: 0;
   margin: 0 auto;
 }
 #form-signin .form-control,
@@ -93,7 +93,7 @@ body {
 }
 
 #page_home .jumbotron h3 {
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 #page_home .jumbotron button {
