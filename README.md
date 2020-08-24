@@ -1,4 +1,4 @@
-![GitHub Workflow Status](https://github.com/lesloi/bomberman/workflows/Node.js%20CI/badge.svg)
+[![GitHub Workflow Status](https://github.com/lesloi/bomberman/workflows/Node.js%20CI/badge.svg)](https://github.com/lesloi/bomberman/actions)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/ae49595b3e334fadb3d11d3355179c77)](https://www.codacy.com/manual/lesloi/bomberman?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=lesloi/bomberman&amp;utm_campaign=Badge_Grade)
 
 # Bomberman
