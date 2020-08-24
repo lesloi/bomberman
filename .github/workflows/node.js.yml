@@ -28,4 +28,8 @@ jobs:
       run: npm ci
     - run: npm run build --if-present
     - name: Audit NPM dependencies
-      run: npm audit
+      run: npm audit  
+    - name: SonarCloud Scan
+      uses: SonarSource/sonarcloud-github-action@v1.3
+      with:
+        projectBaseDir: .      
