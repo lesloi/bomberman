@@ -45,7 +45,8 @@ body {
   padding-top: 0px;
   margin: 0 auto;
 }
-#form-signin .form-control, #form-signup .form-control {
+#form-signin .form-control,
+#form-signup .form-control {
   position: relative;
   height: auto;
   -webkit-box-sizing: border-box;
@@ -67,7 +68,8 @@ body {
   margin: auto;
 }
 
-#canvas_player, #canvas_background {
+#canvas_player,
+#canvas_background {
   position: absolute;
   width: 60%
 }
