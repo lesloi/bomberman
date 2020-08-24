@@ -71,7 +71,7 @@ body {
 #canvas_player,
 #canvas_background {
   position: absolute;
-  width: 60%
+  width: 60%;
 }
 
 #canvas_player {
