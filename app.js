@@ -55,10 +55,11 @@ var last_games = [];
 
 app.get('/', function(req, res) {
   // user is connected
-  if (req.session.user)
+  if (req.session.user) {
     return res.render('index.twig', { 'page' : 'home', 'matches' : last_games, 'csrf_logout' : req.session.csrf_logout });
-  else
+  } else {
     return res.redirect('/signin');
+  }
 });
 
 /* Connection */
@@ -110,9 +111,10 @@ app.post('/signin', function(req, res) {
         return res.render('index.twig', data);
       });
     }
-  } else
+  } else {
     data['error'] = 'Veuillez remplir tous les champs';
-
+  }
+   
   return res.render('index.twig', data);
 });
 
@@ -173,10 +175,11 @@ app.post('/signup', function(req, res) {
           return db.query('SELECT id FROM users WHERE login = ?', [data['form_login']], function(err2, rows) {
             if (err2) {
               console.log(err2);
-            } else if (rows[0] != undefined)
+            } else if (rows[0] != undefined) {
               data['error'] = 'Ce login existe déjà';
-            else
+            } else {
               data['error'] = 'Cette adresse e-mail existe déjà';
+            }
 
             return res.render('index.twig', data);
           });
@@ -190,8 +193,9 @@ app.post('/signup', function(req, res) {
         return res.render('index.twig', data);
       });
     }
-  } else
+  } else {
     data['error'] = 'Veuillez remplir tous les champs';
+  }
 
   return res.render('index.twig', data);
 });
@@ -278,8 +282,9 @@ app.post('/profil', function(req, res) {
         return res.render('index.twig', data);
       });
     }
-  } else
+  } else {
     data['error'] = 'Veuillez remplir tous les champs';
+  }
 
   return res.render('index.twig', data);
 });
