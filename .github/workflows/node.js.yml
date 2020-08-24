@@ -28,4 +28,8 @@ jobs:
       run: npm ci
     - run: npm run build --if-present
     - name: Audit NPM dependencies
-      run: npm audit  
+      run: npm audit
+    - name: Run codacy-analysis-cli
+      uses: mrfyda/codacy-analysis-cli-action@master
+      with:
+        project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
