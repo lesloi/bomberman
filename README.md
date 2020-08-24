@@ -1,3 +1,5 @@
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/lesloi/bomberman/Node.js%20CI)
+
 # Bomberman
 
 
